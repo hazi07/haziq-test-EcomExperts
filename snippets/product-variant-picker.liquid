@@ -32,6 +32,7 @@
       </script>
     </variant-radios>
   {%- else -%}
+
     <variant-selects
       id="variant-selects-{{ section.id }}"
       class="no-js-hidden"
@@ -43,10 +44,19 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
+
         <div class="product-form__input product-form__input--dropdown">
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
+          {% if forloop.index == 1 %}
+          {%- for option in product.options_with_values -%}
+                  <fieldset class="js product-form__input">
+                    
+                    {% render 'product-variant-dropdown', product: product, option: option, block: block %}
+                  </fieldset>
+                {%- endfor -%}
+          {% else %}
           <div class="select">
             <select
               id="Option-{{ section.id }}-{{ forloop.index0 }}"
@@ -56,15 +66,19 @@
             >
               {% render 'product-variant-options', product: product, option: option, block: block %}
             </select>
+
             {% render 'icon-caret' %}
           </div>
+          {% endif %}
         </div>
+
       {%- endfor -%}
 
       <script type="application/json">
         {{ product.variants | json }}
       </script>
     </variant-selects>
+
   {%- endif -%}
 {%- endunless -%}
 

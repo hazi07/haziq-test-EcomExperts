@@ -22,7 +22,7 @@
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
-
+{% if option.name == 'Color' %}
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
@@ -45,12 +45,7 @@
     endfor
   -%}
 
-
-
-
-  {%- if block.settings.picker_type == 'button' -%}
-
-    <input
+    <input 
       type="radio"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
       name="{{ option.name }}"
@@ -67,19 +62,7 @@
       {{ value -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
-  {%- elsif block.settings.picker_type == 'dropdown' -%}
-    <option
-      value="{{ value | escape }}"
-      {% if option.selected_value == value %}
-        selected="selected"
-      {% endif %}
-    >
-      {% if option_disabled -%}
-        {{- 'products.product.value_unavailable' | t: option_value: value -}}
-      {%- else -%}
-        {{- value -}}
-      {%- endif %}
-    </option>
-{% endif %}
 
 {%- endfor -%}
+{% endif %}
+
