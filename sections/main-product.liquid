@@ -608,10 +608,12 @@
         '.product-form__noscript-wrapper-{{ section.id }}'
       ).textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
-
+      // here we change the selected option on refresh to null for variant
+      // on refresh no previous selected value will be displayed on PDP
       document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
-        hiddenInput.value = event.currentTarget.value;
+        hiddenInput.value = " ";
       });
+      // fixed for Unselected Option
     });
   </script>
 
