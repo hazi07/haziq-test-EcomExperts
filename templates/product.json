@@ -35,7 +35,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
@@ -62,7 +62,6 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "background-1",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -85,7 +84,6 @@
         "columns_desktop": 4,
         "color_scheme": "background-1",
         "image_ratio": "square",
-        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
