@@ -572,14 +572,14 @@
  <script>
 document.addEventListener('DOMContentLoaded', function () {
   // Get the radio buttons and the submit button
-  var radioButtons = document.querySelectorAll('input[name="Size"]');
+  var radioButtons = document.querySelector('#template--21483573346587__main-2-0');
   var submitButton = document.querySelector('.product-form__submit');
 
   // Add an event listener to each radio button
   radioButtons.forEach(function (radioButton) {
     radioButton.addEventListener('change', function () {
       // Check if the "Unselected" radio button is selected
-      if (radioButton.value === 'Unselected' && radioButton.checked) {
+      if (radioButton.value === 'Unselected' ) {
         // Disable the submit button
         submitButton.disabled = true;
       } else {
