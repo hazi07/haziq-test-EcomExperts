@@ -564,10 +564,6 @@
         // Remove the 'is_visible' class from the sizes list
         sizesList.classList.remove('is_visible');    
         selectedSize.textContent = input.value;
-        if(selectedSize.textContent == "Unselected") {
-          var submitButton = document.querySelector('.product-form__submit');
-          submitButton.disabled = true;
-        }
       });
 
     });
