@@ -49,7 +49,7 @@
           {% if variant.options[colorsIndex] == color %} 
             {% assign variantSizeHandle = variant.options[sizesIndex]  | handle %}
               <option class="product__sizes-size" value="{{ variant.id }}"
-              {% if variantSizeHandle == "unselected" %} selected {% endif %}
+              {% if variantSizeHandle == "unselected" %} disabled {% endif %}
               >
                 {{ variant.options[sizesIndex] }}
               </option>
