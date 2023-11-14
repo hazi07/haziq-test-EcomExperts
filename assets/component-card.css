@@ -364,7 +364,7 @@
 }
 
 .color__swatches {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   z-index: 4;
 }
@@ -383,9 +383,8 @@
   margin-left:0rem;
 }
 .product__sizes{
-  display: none;
+  display: flex;
   z-index:4;
-  
 }
 .product__sizes select {
   padding: 0.5rem 1rem;
