@@ -1655,3 +1655,7 @@ a.product__text {
     border: none;
   }
 }
+#variant-radios-template--21483573346587__main > fieldset.js.product-form__input.option-size > div > label:nth-child(2) ,
+#template--21483573346587__main-2-0 {
+  pointer-events: none;
+}
