@@ -582,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add an event listener to the selected-size element
   selectedSizeElement.addEventListener('change', function () {
       // Check if the value is 'Unselected' and disable the button accordingly
-      if (selectedSizeElement.textContent.trim() === 'Unselected') {
+      if (selectedSizeElement.textContent() === 'Unselected') {
           disableSubmitButton();
       } else {
           enableSubmitButton();
