@@ -40,7 +40,7 @@ if (!customElements.get('product-form')) {
         .then((response) => {
           
   
-          if (formData.get('id') === "45223570637097"){
+          if (formData.get('id') === "47198989287707"){
           fetch(`/cart/add.js`, {
             method: 'POST',
             headers: {
@@ -48,7 +48,7 @@ if (!customElements.get('product-form')) {
             },
             body: JSON.stringify({
               'items': [{
-                'id': 45224281506089,
+                'id': 47194932117787,
                 'quantity': 1
             }]
             })
