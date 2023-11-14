@@ -6,7 +6,7 @@ class CartRemoveButton extends HTMLElement {
       event.preventDefault();
       const cartItems = this.closest('cart-items') || this.closest('cart-drawer-items');
       if(this.dataset.removeproduct){
-        const productIndex = document.querySelector('[data-variantid="47198989287707"]').getAttribute("id").split('-').pop();
+        const productIndex = document.querySelector('[data-variantid="47194932117787"]').getAttribute("id").split('-').pop();
         setTimeout(function(){
           cartItems.updateQuantity(parseInt(productIndex[0]), 0);
         },1000)
