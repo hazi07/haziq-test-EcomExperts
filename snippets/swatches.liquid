@@ -49,7 +49,7 @@
           {% if variant.options[colorsIndex] == color %} 
             {% assign variantSizeHandle = variant.options[sizesIndex]  | handle %}
               <option class="product__sizes-size" value="{{ variant.id }}"
-              {% if variantSizeHandle == "unselected" %} disabled {% endif %}
+              {% if variantSizeHandle == "Unselected" %} disabled {% endif %}
               >
                 {{ variant.options[sizesIndex] }}
               </option>
@@ -62,7 +62,7 @@
       {% for variant in product.variants  %}
           {% assign variantSizeHandle = variant.options[sizesIndex]  | handle %}
             <option class="product__sizes-size" value="{{ variant.id }}"
-            {% if variantSizeHandle == "unselected" %} disabled {% endif %}
+            {% if variantSizeHandle == "Unselected" %} disabled {% endif %}
             >
               {{ variant.options[sizesIndex] }}
             </option>
